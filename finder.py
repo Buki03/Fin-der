@@ -2,6 +2,7 @@ import requests
 import pprint
 import pandas as pd
 import sqlalchemy as db
+from sqlalchemy.sql import text
 
 # User credentials
 user_fname = input("What is your first name?:" )
@@ -10,13 +11,13 @@ user_email = input("What is your email?:" )
 
 # Dictionary storing new users
 users = {
-    'first_name':[], 
-    'last_name':[],
-    'email':[],
-    'city':[],
-    'interest1':[],
-    'interest2':[],
-    'interest3':[]
+    'first_name':['Mario', 'Melisa', 'Joaquin'], 
+    'last_name':['Juarez', 'Jimenez', 'Muños'],
+    'email':['mj@gmail.com', 'mjimenez@yahoo.com', 'joaq@outlook.com'],
+    'city':['Orlando', 'Orlando', 'Miami'],
+    'interest1':['Sports', 'Art', 'Travel'],
+    'interest2':['Food', 'Enterntainment', 'Sports'],
+    'interest3':['Art', 'Travel', 'Food']
 }
 users['first_name'].append(user_fname)
 users['last_name'].append(user_lname)
@@ -40,22 +41,33 @@ while 1 <= count <= 3:
 
 # API KEY + requests
 api = 'sDf70ANa1m7mGGYOBzj16IfL2suTebt4tv37UVYE'
-in_ad = input() #input adress
-ipaddress = in_ad.replace(':', '%3A')
-url = 'https://api.ipbase.com/v2/info?apikey=' + api + '&ip=' + ipaddress
+in_ad = requests.get('https://api64.ipify.org').text  # CURRENTLY NOT WORKING PROPERLY!
+# ipaddress = in_ad.replace('.', '%3A')
+print(in_ad)
+url = 'https://api.ipbase.com/v2/info?apikey=' + api + '&ip=' + f'{in_ad}'
 response = requests.get(url).json()
 
 
 # Retriving user's location
 user_loc = response["data"]["location"]["city"]["name"]
 # Storing locatioin in dictionary
-users['city'].append(user_loc)
+users["city"].append(user_loc)
 
 
 # Converting "users" dictionary to dataframe
 users_df = pd.DataFrame.from_dict(users)
 engine = db.create_engine('sqlite:///users_df.db')
 users_df.to_sql('UserInfo', con=engine, if_exists='replace', index=False)
+
+# Ordering table by city
 with engine.connect() as connection:
-   query_result = connection.execute(db.text("SELECT * FROM UserInfo;")).fetchall()
-   print(pd.DataFrame(query_result))
+    # # Querying for user index in table
+    # curr_userid_querry = db.text("SELECT 'index' FROM UserInfo WHERE email = :umail;")
+    # # curr_userid_vars = (user_fname, user_lname)
+    # curr_userid = connection.execute(curr_userid_querry, {'umail': user_email}).fetchall()
+
+    # Querying for users with same city
+    same_city_querr = db.text("SELECT * FROM UserInfo ;")
+    same_city = connection.execute(same_city_querr).fetchall()
+    
+    print(pd.DataFrame(same_city))
