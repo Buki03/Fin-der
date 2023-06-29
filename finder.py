@@ -3,25 +3,46 @@ import pprint
 import pandas as pd
 import sqlalchemy as db
 from sqlalchemy.sql import text
-
-# User credentials
-user_fname = input("What is your first name?:" )
-user_lname = input("What is your last name?:" )
-user_email = input("What is your email?:" )
+import re
 
 # Dictionary storing new users
 users = {
-    'first_name':['Mario', 'Melisa', 'Joaquin'], 
-    'last_name':['Juarez', 'Jimenez', 'Muños'],
-    'email':['mj@gmail.com', 'mjimenez@yahoo.com', 'joaq@outlook.com'],
-    'city':['Orlando', 'Orlando', 'Miami'],
-    'interest1':['Sports', 'Art', 'Travel'],
-    'interest2':['Food', 'Enterntainment', 'Sports'],
-    'interest3':['Art', 'Travel', 'Food']
+    'first_name':['Mario', 'Melisa', 'Joaquin', 'Henry'], 
+    'last_name':['Juarez', 'Jimenez', 'Muños', 'James'],
+    'email':['mj@gmail.com', 'mjimenez@yahoo.com', 'joaq@outlook.com', 'henryj@hotmail.com'],
+    'city':['Orlando', 'Orlando', 'Miami', 'Ashburn'],
+    'interest1':['Sports', 'Art', 'Travel', 'Sports'],
+    'interest2':['Food', 'Enterntainment', 'Sports', 'Travel'],
+    'interest3':['Art', 'Travel', 'Food', 'Food']
 }
-users['first_name'].append(user_fname)
-users['last_name'].append(user_lname)
-users['email'].append(user_email)
+while True:
+    user_fname = input("What is your first name? " ).lower().capitalize()
+    if user_fname == "":
+        print("Input your name!")
+        continue
+    else:
+        users['first_name'].append(user_fname)
+        break
+
+while True:
+    user_lname = input("What is your last name? " ).lower().capitalize()
+    if user_lname == "":
+        print("Input your last name!")
+        continue
+    else:
+        users['last_name'].append(user_lname)
+        break
+
+# Promping for valid Email Address
+while True:
+    user_email = input("What is your email? " )
+    regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+    if re.fullmatch(regex, user_email):
+      users['email'].append(user_email)
+      break
+    else:
+      print("Invalid email")
+      continue
 
 # User interests
 count = 1
@@ -53,27 +74,39 @@ geolocation_data = response.json()
 print(ip_address)
 # Extract the city from the geolocation data
 city = geolocation_data.get('location', {}).get('city')
-
+new_user = {
+    'first_name': user_fname,
+    'last_name': user_lname,
+    'email': user_email,
+    'city': city,
+    'interest1': users['interest1'][-1],
+    'interest2': users['interest2'][-1],
+    'interest3': users['interest3'][-1]
+}
+#users["city"].append(city)
 # Retriving user's location
 #user_loc = response["data"]["location"]["city"]["name"]
 # Storing locatioin in dictionary
-users["city"].append(city)
+#
 print(city)
 
-# Converting "users" dictionary to dataframe
-users_df = pd.DataFrame.from_dict(users)
-engine = db.create_engine('sqlite:///users_df.db')
-users_df.to_sql('UserInfo', con=engine, if_exists='replace', index=False)
+database_file = 'users_df.db'
 
-# Ordering table by city
+
+# Create a database engine
+engine = db.create_engine(f'sqlite:///{database_file}')
+
+# Convert the new user dictionary to a DataFrame
+new_user_df = pd.DataFrame(new_user, index=[0])
+
+# Connect to the database and add the new user to the UserInfo table
 with engine.connect() as connection:
-    # # Querying for user index in table
-    # curr_userid_querry = db.text("SELECT 'index' FROM UserInfo WHERE email = :umail;")
-    # # curr_userid_vars = (user_fname, user_lname)
-    # curr_userid = connection.execute(curr_userid_querry, {'umail': user_email}).fetchall()
+    new_user_df.to_sql('UserInfo', con=connection, if_exists='append', index=False)
+    query = db.text("SELECT * FROM UserInfo WHERE city = :city AND email != :email;")
+    result = connection.execute(query, {'city': city, 'email': user_email}).fetchall()
 
-    # Querying for users with same city
-    same_city_querr = db.text("SELECT * FROM UserInfo ;")
-    same_city = connection.execute(same_city_querr).fetchall()
-    
-    print(pd.DataFrame(same_city))
+# Convert the query result to a pandas DataFrame
+users_same_city_df = pd.DataFrame(result, columns=['first_name', 'last_name', 'email', 'city', 'interest1', 'interest2', 'interest3'])
+
+# Print the DataFrame
+print(users_same_city_df)
