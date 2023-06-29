@@ -4,8 +4,7 @@ from finder import users
 
 class TestFinder(unittest.TestCase):
 
-    # mock_input.side_effect = ['John', 'Doe', 
-    #'johndoe@gmail.com', '1', '2', '3']
+
     def test_data(self):
         self.mock_input_values = [
             'John', 'Doe', 'johndoe@gmail.com', '1', '2', '3']
