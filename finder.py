@@ -40,19 +40,25 @@ while 1 <= count <= 3:
         count += 1
 
 # API KEY + requests
-api = 'sDf70ANa1m7mGGYOBzj16IfL2suTebt4tv37UVYE'
-in_ad = requests.get('https://api64.ipify.org').text  # CURRENTLY NOT WORKING PROPERLY!
-# ipaddress = in_ad.replace('.', '%3A')
-print(in_ad)
-url = 'https://api.ipbase.com/v2/info?apikey=' + api + '&ip=' + f'{in_ad}'
-response = requests.get(url).json()
+response = requests.get('https://api64.ipify.org?format=json')
+ip_data = response.json()
 
+# Extract the IP address from the response
+ip_address = ip_data['ip']
+
+api_key = 'at_yck1qHvVmQvHi5JvcCymzKh7EeQY7'
+url = f'https://geo.ipify.org/api/v1?apiKey={api_key}&ipAddress={ip_address}'
+response = requests.get(url)
+geolocation_data = response.json()
+print(ip_address)
+# Extract the city from the geolocation data
+city = geolocation_data.get('location', {}).get('city')
 
 # Retriving user's location
-user_loc = response["data"]["location"]["city"]["name"]
+#user_loc = response["data"]["location"]["city"]["name"]
 # Storing locatioin in dictionary
-users["city"].append(user_loc)
-
+users["city"].append(city)
+print(city)
 
 # Converting "users" dictionary to dataframe
 users_df = pd.DataFrame.from_dict(users)
