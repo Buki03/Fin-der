@@ -1,70 +1,74 @@
 
 def title_im():
-    print("   ▄████████  ▄█  ███▄▄▄▄   ████████▄     ▄████████    ▄████████ ")
-    print("  ███    ███ ███  ███▀▀▀██▄ ███   ▀███   ███    ███   ███    ███ ")
-    print("  ███    █▀  ███▌ ███   ███ ███    ███   ███    █▀    ███    ███ ")
-    print(" ▄███▄▄▄     ███▌ ███   ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ ")
-    print("▀▀███▀▀▀     ███▌ ███   ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   ")
-    print("  ███        ███  ███   ███ ███    ███   ███    █▄  ▀███████████ ")
-    print("  ███        ███  ███   ███ ███   ▄███   ███    ███   ███    ███ ")
-    print("  ███        █▀    ▀█   █▀  ████████▀    ██████████   ███    ███ ")
-    print("                                                      ███    ███ ")
-    print("_______________________________________________________________")
-    print("")
+    print('''
+    
+    ▄████████  ▄█   ███▄▄▄▄   ████████▄     ▄████████    ▄████████ 
+    ███    ███ ███  ███▀▀▀██▄ ███   ▀███   ███    ███   ███    ███ 
+    ███    █▀  ███▌ ███   ███ ███    ███   ███    █▀    ███    ███ 
+    ▄███▄▄▄    ███▌ ███   ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ 
+    ▀▀███▀▀▀   ███▌ ███   ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
+    ███        ███  ███   ███ ███    ███   ███    █▄  ▀███████████ 
+    ███        ███  ███   ███ ███   ▄███   ███    ███   ███    ███ 
+    ███        █▀    ▀█   █▀  ████████▀    ██████████   ███    ███ 
+                                                        ███    ███ 
+    _______________________________________________________________
+    
 
-    print("██ ███████     ███████  ██████  ██████      ██    ██  ██████  ██    ██ ")
-    print("██ ██          ██      ██    ██ ██   ██      ██  ██  ██    ██ ██    ██ ")
-    print("██ ███████     █████   ██    ██ ██████        ████   ██    ██ ██    ██ ")
-    print("██      ██     ██      ██    ██ ██   ██        ██    ██    ██ ██    ██ ")
-    print("██ ███████     ██       ██████  ██   ██        ██     ██████   ██████  ")
+    ██ ███████     ███████  ██████  ██████      ██    ██  ██████  ██    ██ 
+    ██ ██          ██      ██    ██ ██   ██      ██  ██  ██    ██ ██    ██ 
+    ██ ███████     █████   ██    ██ ██████        ████   ██    ██ ██    ██ 
+    ██      ██     ██      ██    ██ ██   ██        ██    ██    ██ ██    ██ 
+    ██ ███████     ██       ██████  ██   ██        ██     ██████   ██████  ''')
 
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXKKXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKXWMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKNWMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKXWMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKKKK0KXWMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX00KKKKNWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMMMMMMMMMMMMMMMWX00000KXWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNMMMMMMMMMMMMMMMWX000000KWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKWMMMMMMMMMMMMMMMNK000000KNMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMNK00KNMMMMMMMMMMMMMMWX0000000KNMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMWK0000KNWMMMMMMMMMMMWX00000000KWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMWX000000KXNWMMMMMMMWNX000000000KWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMWX0OO0OOO00KXXXXXXKK0O00OO0OO00XWMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOOO0NMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMWKOOOOOOOOOOOOOOOOOOOOOOOOOO0NWMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMWMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOXWMMMMMWWWMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMWNKKXWMMMMMMMMN0OkkOkkkkkkkkkkkkkkkkkkkk0NMMMMMMWKKNWMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMWX0kkOXWMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMWKOOKWWMMMMMMMMMMMM")
-    print("MMMMMMMMMMMWKOkkkkO0XNNNNXKOkkkkkkkkkkkkkkkkkkkkkkkkOKWMMMMMMWKkkOKNMMMMMMMMMMMM")
-    print("MMMMMMMMMMNKOkkkkkkkOOOOOOkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMW0kkkO0NMMMMMMMMMMM")
-    print("MMMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMWXOkkkkOKWMMMMMMMMMM")
-    print("MMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO0XWWWNKOkkkkkkOXWMMMMMMMMM")
-    print("MMMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOO0OOkkkkkkkkk0NMMMMMMMMM")
-    print("MMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMMM")
-    print("MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM")
-    print("MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM")
-    print("MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMMMM")
-    print("MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM")
-    print("MMMMMMMWXkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM")
-    print("MMMMMMMMNOxxkxxkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkONMMMMMMMMM")
-    print("MMMMMMMMWKkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxkxxxkKWMMMMMMMMM")
-    print("MMMMMMMMMN0xxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxk0NMMMMMMMMMM")
-    print("MMMMMMMMMWNOxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxONMMMMMMMMMMM")
-    print("MMMMMMMMMMWXOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkOXWMMMMMMMMMMM")
-    print("MMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMNKOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOKNMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMWNKOkxddxxdddxxxxxxxxxxxxxxxxxxxxddddxxOKNWMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMWNKOkxdddddddddddddddddddddddddxkOKNWWMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMWNXK0OkxddddddddddddddxxkO0KXNWMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWNXXKK0000000KKXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
-    print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+    
+    print(''' 
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXKKXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKXWMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKNWMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKXWMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKKKK0KXWMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX00KKKKNWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMMMMMMMMMMMMMMMWX00000KXWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNMMMMMMMMMMMMMMMWX000000KWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKWMMMMMMMMMMMMMMMNK000000KNMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMNK00KNMMMMMMMMMMMMMMWX0000000KNMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMWK0000KNWMMMMMMMMMMMWX00000000KWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMWX000000KXNWMMMMMMMWNX000000000KWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMWX0OO0OOO00KXXXXXXKK0O00OO0OO00XWMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOOO0NMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMWKOOOOOOOOOOOOOOOOOOOOOOOOOO0NWMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMWMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOXWMMMMMWWWMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMWNKKXWMMMMMMMMN0OkkOkkkkkkkkkkkkkkkkkkkk0NMMMMMMWKKNWMMMMMMMMMMMMMM
+    MMMMMMMMMMMMWX0kkOXWMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMWKOOKWWMMMMMMMMMMMM
+    MMMMMMMMMMMWKOkkkkO0XNNNNXKOkkkkkkkkkkkkkkkkkkkkkkkkOKWMMMMMMWKkkOKNMMMMMMMMMMMM
+    MMMMMMMMMMNKOkkkkkkkOOOOOOkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMW0kkkO0NMMMMMMMMMMM
+    MMMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMWXOkkkkOKWMMMMMMMMMM
+    MMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO0XWWWNKOkkkkkkOXWMMMMMMMMM
+    MMMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOO0OOkkkkkkkkk0NMMMMMMMMM
+    MMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMMM
+    MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM
+    MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM
+    MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMMMM
+    MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM
+    MMMMMMMWXkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM
+    MMMMMMMMNOxxkxxkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkONMMMMMMMMM
+    MMMMMMMMWKkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxkxxxkKWMMMMMMMMM
+    MMMMMMMMMN0xxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxk0NMMMMMMMMMM
+    MMMMMMMMMWNOxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxONMMMMMMMMMMM
+    MMMMMMMMMMWXOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkOXWMMMMMMMMMMM
+    MMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMM
+    MMMMMMMMMMMMMNKOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOKNMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMWNKOkxddxxdddxxxxxxxxxxxxxxxxxxxxddddxxOKNWMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMWNKOkxdddddddddddddddddddddddddxkOKNWWMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMWNXK0OkxddddddddddddddxxkO0KXNWMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWNXXKK0000000KKXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM''')
