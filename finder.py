@@ -62,29 +62,25 @@ users = {
         'Food',
         'Food']}
 
-# Initializing names
-user_fname = input("What is your first name? ").lower().capitalize()
-user_lname = input("What is your last name? ").lower().capitalize()
 
-# Checking given names are appropriate
-
-
-def name_check(namestr, colname, namevar):
+def name_check(namestr, colname):
     while True:
+        namevar = input(f"What is your {namestr}? ").lower().capitalize()
         regex = re.compile(r'[a-zA-Z]+')
-        if namevar == "":
-            print("Input your {namestr}!")
+        if (namevar == "") or (namevar is None):
+            print(f"Input your {namestr}!")
             continue
-        elif re.fullmatch(regex, user_fname):
-            users[f'{colname}'].append(user_fname)
+        elif re.fullmatch(regex, namevar):
+            users[f'{colname}'].append(namevar)
             break
         else:
-            print("Input valid {namestr}!")
+            print(f"Input valid {namestr}!")
             continue
 
 
-name_check("first name", "first_name", user_fname)
-name_check("last name", "last_name", user_lname)
+user_fname = name_check("first name", "first_name")
+user_lname = name_check("last name", "last_name")
+
 
 # Promping for valid Email Address
 while True:
@@ -114,7 +110,8 @@ while 1 <= count <= 3:
                          )
 
     if (user_interests > 5) or (user_interests < 1):
-        raise ValueError('Please choose only from given numbers')
+        print('Please choose only from given numbers')
+        continue
     else:
         users[f'interest{count}'].append(dic_interests[f'{user_interests}'])
         count += 1
