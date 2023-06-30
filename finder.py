@@ -4,6 +4,90 @@ import pandas as pd
 import sqlalchemy as db
 from sqlalchemy.sql import text
 import re
+from api_key import api_key
+
+q1 = input("Are you struggling to make friends? (yes/yes) ")
+q2 = input("Are you sick of the friends you have? (yes/yes) ")
+q3 = input("Do you want to meet new people? (yes/yes) ")
+if q1 != 'yes' and q2 != 'yes' and q3 != 'yes':
+    print("GOODBYE!!!!")
+    sys.exit()
+print("   ▄████████  ▄█  ███▄▄▄▄   ████████▄     ▄████████    ▄████████ ")
+print("  ███    ███ ███  ███▀▀▀██▄ ███   ▀███   ███    ███   ███    ███ ")
+print("  ███    █▀  ███▌ ███   ███ ███    ███   ███    █▀    ███    ███ ")
+print(" ▄███▄▄▄     ███▌ ███   ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀ ")
+print("▀▀███▀▀▀     ███▌ ███   ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   ")
+print("  ███        ███  ███   ███ ███    ███   ███    █▄  ▀███████████ ")
+print("  ███        ███  ███   ███ ███   ▄███   ███    ███   ███    ███ ")
+print("  ███        █▀    ▀█   █▀  ████████▀    ██████████   ███    ███ ")
+print("                                                      ███    ███ ")
+print("_______________________________________________________________")                                                      
+print("")                                                      
+
+print("██ ███████     ███████  ██████  ██████      ██    ██  ██████  ██    ██ ")
+print("██ ██          ██      ██    ██ ██   ██      ██  ██  ██    ██ ██    ██ ")
+print("██ ███████     █████   ██    ██ ██████        ████   ██    ██ ██    ██ ")
+print("██      ██     ██      ██    ██ ██   ██        ██    ██    ██ ██    ██ ")
+print("██ ███████     ██       ██████  ██   ██        ██     ██████   ██████  ")
+
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWNXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXKKXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKXWMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKNWMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKKKKXWMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNKKKK0KXWMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX00KKKKNWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWMMMMMMMMMMMMMMMWX00000KXWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNNMMMMMMMMMMMMMMMWX000000KWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMWXKKWMMMMMMMMMMMMMMMNK000000KNMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMNK00KNMMMMMMMMMMMMMMWX0000000KNMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMWK0000KNWMMMMMMMMMMMWX00000000KWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMWX000000KXNWMMMMMMMWNX000000000KWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMWX0OO0OOO00KXXXXXXKK0O00OO0OO00XWMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOOO0NMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMWKOOOOOOOOOOOOOOOOOOOOOOOOOO0NWMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMWX0OOOOOOOOOOOOOOOOOOOOOOOOOKWMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMWMMMMMMMMMMN0OOOOOOOOOOOOOOOOOOOOOOOOOXWMMMMMWWWMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMWNKKXWMMMMMMMMN0OkkOkkkkkkkkkkkkkkkkkkkk0NMMMMMMWKKNWMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMWX0kkOXWMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMWKOOKWWMMMMMMMMMMMM")
+print("MMMMMMMMMMMWKOkkkkO0XNNNNXKOkkkkkkkkkkkkkkkkkkkkkkkkOKWMMMMMMWKkkOKNMMMMMMMMMMMM")
+print("MMMMMMMMMMNKOkkkkkkkOOOOOOkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMW0kkkO0NMMMMMMMMMMM")
+print("MMMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMWXOkkkkOKWMMMMMMMMMM")
+print("MMMMMMMMWKOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkO0XWWWNKOkkkkkkOXWMMMMMMMMM")
+print("MMMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOO0OOkkkkkkkkk0NMMMMMMMMM")
+print("MMMMMMMWXOkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkOXWMMMMMMMM")
+print("MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM")
+print("MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM")
+print("MMMMMMMN0kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0NMMMMMMMM")
+print("MMMMMMMWKkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk0WMMMMMMMM")
+print("MMMMMMMWXkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkKWMMMMMMMM")
+print("MMMMMMMMNOxxkxxkkkkkkkkkkkkkkkkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkONMMMMMMMMM")
+print("MMMMMMMMWKkxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxkxxxkKWMMMMMMMMM")
+print("MMMMMMMMMN0xxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkxxk0NMMMMMMMMMM")
+print("MMMMMMMMMWNOxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxONMMMMMMMMMMM")
+print("MMMMMMMMMMWXOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkOXWMMMMMMMMMMM")
+print("MMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMNKOkxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxOKNMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMWN0kxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxk0NWMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMWNKOkxddxxdddxxxxxxxxxxxxxxxxxxxxddddxxOKNWMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMWNKOkxdddddddddddddddddddddddddxkOKNWWMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMWNXK0OkxddddddddddddddxxkO0KXNWMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWNXXKK0000000KKXXNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM")
+
+print("")
+print("")
+input("Click any key to start: ")
+
+
+print("")
+print("")
 
 # Dictionary storing new users
 users = {
@@ -34,7 +118,7 @@ users = {
         'Sports'],
     'interest2': [
         'Food',
-        'Enterntainment',
+        'Entertainment',
         'Sports',
         'Travel'],
     'interest3': [
@@ -42,23 +126,30 @@ users = {
         'Travel',
         'Food',
         'Food']}
-while True:
-    user_fname = input("What is your first name? ").lower().capitalize()
-    if user_fname == "":
-        print("Input your name!")
-        continue
-    else:
-        users['first_name'].append(user_fname)
-        break
 
-while True:
-    user_lname = input("What is your last name? ").lower().capitalize()
-    if user_lname == "":
-        print("Input your last name!")
-        continue
-    else:
-        users['last_name'].append(user_lname)
-        break
+# Initializing names
+user_fname = input("What is your first name? ").lower().capitalize()
+user_lname = input("What is your last name? ").lower().capitalize()
+
+# Checking given names are appropriate
+
+
+def name_check(namestr, colname, namevar):
+    while True:
+        regex = re.compile(r'[a-zA-Z]+')
+        if namevar == "":
+            print("Input your {namestr}!")
+            continue
+        elif re.fullmatch(regex, user_fname):
+            users[f'{colname}'].append(user_fname)
+            break
+        else:
+            print("Input valid {namestr}!")
+            continue
+
+
+name_check("first name", "first_name", user_fname)
+name_check("last name", "last_name", user_lname)
 
 # Promping for valid Email Address
 while True:
@@ -77,7 +168,7 @@ count = 1
 dic_interests = {
     '1': 'Sports',
     '2': 'Food',
-    '3': 'Enterntainment',
+    '3': 'Entertainment',
     '4': 'Art',
     '5': 'Travel'}
 while 1 <= count <= 3:
@@ -90,7 +181,7 @@ while 1 <= count <= 3:
     if (user_interests > 5) or (user_interests < 1):
         raise ValueError('Please choose only from given numbers')
     else:
-        users[f'interest{count}'].append(dic_interests[f'{count}'])
+        users[f'interest{count}'].append(dic_interests[f'{user_interests}'])
         count += 1
 
 # API KEY + requests
@@ -99,12 +190,11 @@ ip_data = response.json()
 
 # Extract the IP address from the response
 ip_address = ip_data['ip']
-
-api_key = 'at_yck1qHvVmQvHi5JvcCymzKh7EeQY7'
-url = f'https://geo.ipify.org/api/v1?apiKey={api_key}&ipAddress={ip_address}'
+api = api_key
+url = f'https://geo.ipify.org/api/v1?apiKey={api}&ipAddress={ip_address}'
 response = requests.get(url)
 geolocation_data = response.json()
-print(ip_address)
+
 # Extract the city from the geolocation data
 city = geolocation_data.get('location', {}).get('city')
 new_user = {
@@ -116,15 +206,10 @@ new_user = {
     'interest2': users['interest2'][-1],
     'interest3': users['interest3'][-1]
 }
-# users["city"].append(city)
-# Retriving user's location
-# user_loc = response["data"]["location"]["city"]["name"]
-# Storing locatioin in dictionary
-#
-print(city)
+print("The city you are located in is: " + city + "!!!")
 
+# Initializing database
 database_file = 'users_df.db'
-
 
 # Create a database engine
 engine = db.create_engine(f'sqlite:///{database_file}')
@@ -154,7 +239,12 @@ users_same_city_df = pd.DataFrame(
         'city',
         'interest1',
         'interest2',
-        'interest3'])
+        'interest3']).drop_duplicates(subset=['email'])
 
 # Print the DataFrame
+print("")
+print("")
+print("CONGRATS, you found your MATCH")
+input("The following people are located near you! Click enter to see")
+print("")
 print(users_same_city_df)
